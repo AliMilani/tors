@@ -1,0 +1,15 @@
+{
+  "name": "tor",
+  "version": "1.0.0",
+  "description": "tor for node",
+  "main": "index.js",
+  "scripts": {
+    "install": "node install.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "extract-zip": "^2.0.1"
+  }
+}
