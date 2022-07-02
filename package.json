@@ -1,25 +1,29 @@
 {
-  "name": "tors",
-  "version": "1.0.1",
-  "description": "tor for node",
-  "main": "index.js",
-  "scripts": {
-    "install": "node install.js"
-  },
-  "keywords": [
-    "tor",
-    "proxy",
-    "socks5",
-    "socks",
-    "onion",
-    "tor-control"
-  ],
-  "os": [
-    "win32"
-  ],
-  "author": "Ali Milani",
-  "license": "MIT",
-  "dependencies": {
-    "extract-zip": "^2.0.1"
-  }
+    "name": "tors",
+    "version": "1.0.2",
+    "description": "tor for node",
+    "main": "index.js",
+    "scripts": {
+        "install": "node install.js"
+    },
+    "keywords": [
+        "tor",
+        "proxy",
+        "socks5",
+        "socks",
+        "onion",
+        "tor-control"
+    ],
+    "os": [
+        "win32"
+    ],
+    "author": "Ali Milani",
+    "license": "MIT",
+    "dependencies": {
+        "extract-zip": "^2.0.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AliMilani/tors"
+    }
 }
