@@ -58,7 +58,7 @@ Type: `object`
 
 ##### port
 
-Type: `string`\
+Type: `string` | `number`\
 Default: `9050`
 
 port to use for tor process

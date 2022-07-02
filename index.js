@@ -71,19 +71,19 @@ module.exports = class TorProxy {
     }
 
     constructor(options) {
-        if (typeof options === "string") {
+        if (typeof options === "string" || typeof options === "number") {
             options = {
                 port: options,
             };
         }
         this.#options = {
-            path: path.join(__dirname,localTorDir, "Tor"),
+            path: path.join(__dirname, localTorDir, "Tor"),
             ip: "127.0.0.1",
             port: "9050",
             controlPort: "9151",
             controlPassword: "giraffe", // default password
-            dataPath: path.join(__dirname,localTorDir, "data", "default"),
-            torrcPath: path.join(__dirname,localTorDir, "Tor", "torrc"),
+            dataPath: path.join(__dirname, localTorDir, "data", "default"),
+            torrcPath: path.join(__dirname, localTorDir, "Tor", "torrc"),
             ...options,
         };
 
