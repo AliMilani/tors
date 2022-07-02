@@ -77,13 +77,13 @@ module.exports = class TorProxy {
             };
         }
         this.#options = {
-            path: path.join(localTorDir, "Tor"),
+            path: path.join(__dirname,localTorDir, "Tor"),
             ip: "127.0.0.1",
             port: "9050",
             controlPort: "9151",
             controlPassword: "giraffe", // default password
-            dataPath: path.join(localTorDir, "data", "default"),
-            torrcPath: path.join(localTorDir, "Tor", "torrc"),
+            dataPath: path.join(__dirname,localTorDir, "data", "default"),
+            torrcPath: path.join(__dirname,localTorDir, "Tor", "torrc"),
             ...options,
         };
 
