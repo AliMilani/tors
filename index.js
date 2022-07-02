@@ -95,12 +95,10 @@ module.exports = class TorProxy {
         }
     }
     async startTorProcess() {
-        // torrc file should be created before starting tor process
-        if (!fs.existsSync(this.#options.torrcPath))
-            await this.#createTorrcFile(
-                this.#options.torrcPath,
-                this.#options.controlPassword
-            );
+        await this.#createTorrcFile(
+            this.#options.torrcPath,
+            this.#options.controlPassword
+        );
         if (this.#pid) {
             await this.killTorProcess();
             this.#pid = null;
@@ -193,6 +191,11 @@ module.exports = class TorProxy {
                         });
 
                         if (!success) {
+                            if (data.toString().includes("Password did not match HashedControlPassword")) {
+                                throw new Error(
+                                    "controlPassword password did not match 'HashedControlPassword' (in torrc file)"
+                                );
+                            }
                             let err = new Error(
                                 "Error communicating with Tor ControlPort\n" +
                                 data
