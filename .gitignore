@@ -1,6 +1,8 @@
 # Local tor directory 
 .local-tor/
 
+.vscode/
+yarn.lock
 # Logs
 logs
 *.log
